@@ -7,10 +7,12 @@
 </head>
 <body>
     <h1>Comments</h1>
+    <a href="/comments/new">New Comment</a>
 
     <%for (let comment of comments) {%>
         <h3><%= comment.username%></h3>
         <p><%= comment.comment%></p>
+        <a href="/comments/<%= comment.id%>">View Comment</a>
         <hr>
     <%}%>
     
